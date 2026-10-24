@@ -15,43 +15,52 @@
   "navigation": {
     "groups": [
       {
-        "group": "Recrutamento",
+        "group": "Manual",
         "pages": [
           {
             "title": "Introdução",
-            "path": "introduo"
+            "path": "introduo",
+            "icon": "book"
           },
           {
             "title": "Processo",
-            "path": "processo"
+            "path": "processo",
+            "icon": "fa-solid:table"
           },
           {
             "title": "Vestimenta",
-            "path": "vestimenta"
+            "path": "vestimenta",
+            "icon": "shirt"
           },
           {
             "title": "Postura e conduta oficial",
-            "path": "postura-e-conduta-oficial"
+            "path": "postura-e-conduta-oficial",
+            "icon": "fa-solid:person-walking"
           },
           {
             "title": "Código Q",
-            "path": "cdigo-q"
+            "path": "cdigo-q",
+            "icon": "fa-solid:walkie-talkie"
           },
           {
             "title": "Código de patrulha",
-            "path": "cdigo-de-patrulha"
+            "path": "cdigo-de-patrulha",
+            "icon": "fa-solid:walkie-talkie"
           },
           {
             "title": "Abordagens",
-            "path": "abordagens"
+            "path": "abordagens",
+            "icon": "car-taxi-front"
           },
           {
             "title": "Abordagem Felony",
-            "path": "abordagem-felony"
+            "path": "abordagem-felony",
+            "icon": "fa-solid:car-on"
           },
           {
             "title": "PCD’s (pessoas com deficiência)",
-            "path": "pcds-pessoas-com-deficincia"
+            "path": "pcds-pessoas-com-deficincia",
+            "icon": "fa-brands:accessible-icon"
           }
         ]
       }
