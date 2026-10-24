@@ -12,52 +12,7 @@
     "tabs": [
       {
         "tab": "Documentation",
-        "icon": "book",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "icon": "rocket",
-            "pages": [
-              {
-                "title": "Introduction",
-                "path": "introduction",
-                "icon": "star"
-              },
-              {
-                "title": "Getting Started",
-                "path": "getting-started",
-                "icon": "play"
-              }
-            ]
-          },
-          {
-            "group": "Core Concepts",
-            "icon": "layers",
-            "pages": [
-              {
-                "title": "Documentation Structure",
-                "path": "documentation-structure",
-                "icon": "layout"
-              },
-              {
-                "title": "Content Management",
-                "path": "content-management",
-                "icon": "file-text"
-              }
-            ]
-          },
-          {
-            "group": "Configuration",
-            "icon": "settings",
-            "pages": [
-              {
-                "title": "Configuration",
-                "path": "configuration",
-                "icon": "sliders"
-              }
-            ]
-          }
-        ]
+        "icon": "book"
       },
       {
         "tab": "API Reference",
@@ -125,6 +80,22 @@
             "icon": "history"
           }
         ]
+      }
+    ],
+    "groups": [
+      {
+        "group": "Recrutamento",
+        "pages": []
+      },
+      {
+        "group": "Recrutamento",
+        "pages": []
+      }
+    ],
+    "pages": [
+      {
+        "group": "Introdução",
+        "pages": []
       }
     ]
   }
