@@ -2,10 +2,14 @@
   "name": "DPD FTO Program",
   "colors": {
     "light": {
-      "brand": "#3B82F6"
+      "brand": "#571a16",
+      "heading": "#83673d",
+      "text": "#583a23"
     },
     "dark": {
-      "brand": "#87B1F6"
+      "brand": "#731d1a",
+      "heading": "#0b0c0c",
+      "text": "#ffffff"
     }
   },
   "navigation": {
@@ -53,5 +57,9 @@
       }
     ],
     "pages": []
-  }
+  },
+  "logo-dark": "https://blob-cdn.documentation.ai/org-a4d97c48-f1a7-46ba-a508-451c12b8e0f4/doc-646c4744-559e-4dbe-bf7a-ef78d60e413e/1792871421333-vbwgggmxyua-Emblema_Policial_de_Detroit_em_Metal_Envelhecido.png?fm=auto&auto=compress%2Cformat",
+  "template": "atlas",
+  "logo-light": "https://blob-cdn.documentation.ai/org-a4d97c48-f1a7-46ba-a508-451c12b8e0f4/doc-646c4744-559e-4dbe-bf7a-ef78d60e413e/1792870856143-qi7ffbxwtsi-0482578e-c6c5-450a-94cb-68dcae71d96c.png?fm=auto&auto=compress%2Cformat",
+  "favicon": "https://blob-cdn.documentation.ai/org-a4d97c48-f1a7-46ba-a508-451c12b8e0f4/doc-646c4744-559e-4dbe-bf7a-ef78d60e413e/1792870856143-qi7ffbxwtsi-0482578e-c6c5-450a-94cb-68dcae71d96c.png?fm=auto&auto=compress%2Cformat"
 }
