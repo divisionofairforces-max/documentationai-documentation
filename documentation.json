@@ -9,94 +9,21 @@
     }
   },
   "navigation": {
-    "tabs": [
-      {
-        "tab": "Documentation",
-        "icon": "book"
-      },
-      {
-        "tab": "API Reference",
-        "icon": "code",
-        "groups": [
-          {
-            "group": "Endpoints",
-            "icon": "terminal",
-            "openapi": "api-reference/openapi.yaml",
-            "pages": []
-          }
-        ]
-      },
-      {
-        "tab": "Help Center",
-        "icon": "help-circle",
-        "pages": [
-          {
-            "title": "Help Center",
-            "path": "help-center",
-            "icon": "home"
-          },
-          {
-            "group": "FAQs",
-            "icon": "help-circle",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Getting Started",
-                "path": "help-center/faq/getting-started"
-              }
-            ]
-          },
-          {
-            "group": "Troubleshooting",
-            "icon": "alert-triangle",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Login Issues",
-                "path": "help-center/troubleshooting/login-issues"
-              }
-            ]
-          },
-          {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Onboarding Session",
-                "path": "help-center/guides/onboarding-session"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Changelog",
-        "icon": "clock",
-        "pages": [
-          {
-            "title": "Release History",
-            "path": "changelog",
-            "icon": "history"
-          }
-        ]
-      }
-    ],
     "groups": [
       {
         "group": "Recrutamento",
-        "pages": []
-      },
-      {
-        "group": "Recrutamento",
-        "pages": []
+        "pages": [
+          {
+            "title": "Introdução",
+            "path": "introduo"
+          },
+          {
+            "title": "Processo",
+            "path": "processo"
+          }
+        ]
       }
     ],
-    "pages": [
-      {
-        "group": "Introdução",
-        "pages": []
-      }
-    ]
+    "pages": []
   }
 }
