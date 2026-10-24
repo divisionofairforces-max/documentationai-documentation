@@ -1,0 +1,158 @@
+---
+title: Getting Started
+description: Set up your workspace and complete the first few steps to begin using the DPD FTO Program documentation system. This page helps new users get productive quickly.
+---
+
+## Overview
+
+Welcome to the DPD FTO Program documentation starter kit. Use this page to create your workspace, publish your first project, and establish a simple workflow that you can adapt to your team.
+
+This page is intentionally generic so you can customize names, links, and examples to match your own process. It is designed to help you move from setup to your first published documentation page with minimal friction.
+
+<Callout kind="info">
+
+This is a starter kit template. Replace the sample names, URLs, and workflows with your own product details before publishing.
+
+</Callout>
+
+## What you will set up
+
+<Columns cols={2}>
+  <Card title="Workspace setup" icon="settings" href="#workspace-setup">
+    Create a clean workspace, add your team, and define the docs structure.
+  </Card>
+  <Card title="First project" icon="book-open" href="#first-project-setup">
+    Create your first project space and organize the initial pages.
+  </Card>
+  <Card title="Navigation" icon="chevron-right" href="#initial-navigation">
+    Learn how to move between pages, sections, and project areas.
+  </Card>
+  <Card title="Workflow" icon="zap" href="#recommended-workflow">
+    Follow a simple pattern for drafting, reviewing, and publishing content.
+  </Card>
+</Columns>
+
+## Workspace setup
+
+Start by creating a workspace that clearly identifies your documentation area. Keep the name short, make ownership obvious, and choose a structure that your team can maintain over time.
+
+### Suggested setup steps
+
+<Steps>
+  <Step title="Create the workspace" icon="download">
+    Choose a workspace name that reflects your team or product. For example, you might use `DPD FTO Program Docs` for the main documentation space.
+  </Step>
+  <Step title="Add your first members" icon="users">
+    Invite the people who will write, review, and approve content. Start small so you can establish a consistent process.
+  </Step>
+  <Step title="Define core sections" icon="book-open">
+    Create a few high-value sections such as Overview, Setup, Guides, and Reference. This gives readers a predictable path through the documentation.
+  </Step>
+</Steps>
+
+## First project setup
+
+Use your first project to prove the structure before you scale it. A small, complete project helps you validate titles, links, and publishing flow without creating extra maintenance work.
+
+### Example project structure
+
+| Section | Purpose | Example content |
+|---------|---------|-----------------|
+| Overview | Introduce the project | What the project does and who uses it |
+| Setup | Describe initial configuration | Workspace setup, permissions, and defaults |
+| Guides | Explain common tasks | How to create, edit, and publish pages |
+| Reference | Record reusable details | Naming rules, conventions, and links |
+
+### Sample project metadata
+
+```json
+{
+  "projectName": "DPD FTO Program",
+  "defaultLocale": "en",
+  "docsRoot": "/docs",
+  "homePage": "getting-started"
+}
+```
+
+## Initial navigation
+
+Use a small navigation pattern at first. Readers should be able to find the home page, setup guide, and first reference page within a few clicks.
+
+<Tabs>
+  <Tab title="Home" icon="book-open">
+    The home page should explain what the documentation covers, who should use it, and where to begin.
+  </Tab>
+  <Tab title="Setup" icon="settings">
+    The setup section should focus on account access, workspace configuration, and initial permissions.
+  </Tab>
+  <Tab title="Guides" icon="chevron-right">
+    The guides section should walk readers through recurring tasks, one task at a time.
+  </Tab>
+</Tabs>
+
+## First documentation page
+
+Your first page should answer one simple question: what should a new user do next? Keep the page focused, concise, and action oriented.
+
+### Recommended page outline
+
+1. Introduce the page purpose in one short paragraph.
+2. List the first task the reader should complete.
+3. Include a code example or configuration sample.
+4. Link to the next step in the workflow.
+
+<CodeGroup tabs="Markdown,JSON">
+  ```markdown
+## Welcome
+
+Start here if you are new to the documentation workspace.
+
+- Set up your account
+- Create your first project
+- Publish your first page
+  ```
+  ```json
+{
+  "title": "Welcome",
+  "status": "draft",
+  "nextStep": "setup"
+}
+  ```
+</CodeGroup>
+
+## Recommended workflow
+
+A simple workflow keeps your documentation maintainable. Draft content first, review it with the right people, and publish only when the page is complete.
+
+<Board title="Starter documentation workflow">
+  <BoardColumn title="Draft" color="0" icon="pencil">
+    <BoardCard title="Create page draft" description="Write the page purpose, outline, and first examples." dueDate="2026-11-01" author="Documentation Team" />
+    <BoardCard title="Add navigation links" description="Connect the page to related content." />
+  </BoardColumn>
+  <BoardColumn title="Review" color="1" icon="eye">
+    <BoardCard title="Check accuracy" description="Verify wording, links, and examples." author="Editor" />
+  </BoardColumn>
+  <BoardColumn title="Publish" color="2" icon="check-circle">
+    <BoardCard title="Release page" description="Publish after review and final cleanup." createdAt="2026-11-02" />
+  </BoardColumn>
+</Board>
+
+## Tips for success
+
+<ExpandableGroup>
+  <Expandable title="How much content should I write first?" default-open="true">
+    Start small. One clear page is better than several unfinished pages.
+  </Expandable>
+  <Expandable title="What should I customize first?" default-open="false">
+    Update the workspace name, the project structure, and any sample links before you share the docs with others.
+  </Expandable>
+  <Expandable title="How do I keep the docs consistent?" default-open="false">
+    Use the same headings, naming rules, and page order across your documentation space.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="tip">
+
+If you are just beginning, publish one useful page first and improve the structure over time. Small, steady updates are easier to review and maintain.
+
+</Callout>

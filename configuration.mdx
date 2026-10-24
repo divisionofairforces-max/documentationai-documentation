@@ -1,0 +1,244 @@
+---
+title: Configuration
+description: Configure site-wide settings, defaults, and documentation preferences to match your team’s workflow. Use this page to adapt the documentation space to your needs.
+---
+
+## Overview
+
+Use this page to shape the default behavior of your documentation space. You can tune branding, navigation, templates, and environment-specific settings so the site matches your team’s workflow.
+
+This starter kit is generic by design. You can replace the sample values, labels, and examples with your own product choices without changing the structure of the page.
+
+<Callout kind="info">
+  The examples below are safe starting points. Replace them with your own domains, team names, and defaults before you publish.
+</Callout>
+
+## Configuration areas
+
+<Columns cols={2}>
+  <Card title="Site settings" icon="settings" href="#site-settings">
+    Define the global behavior of your docs, including language, time zone, and visibility defaults.
+  </Card>
+  <Card title="Branding options" icon="zap" href="#branding-options">
+    Apply your logo, color palette, and tone so the documentation feels consistent with your product.
+  </Card>
+  <Card title="Navigation" icon="arrow-right" href="#navigation-configuration">
+    Organize menus, section order, and entry points so readers can find content quickly.
+  </Card>
+  <Card title="Templates" icon="book-open" href="#default-templates">
+    Set reusable page structures for guides, references, and onboarding content.
+  </Card>
+</Columns>
+
+## Site settings
+
+Start with the values that affect every page in your documentation space. These settings usually control defaults for date format, locale, and how readers experience the site.
+
+| Setting | Suggested default | Purpose |
+|--------|-------------------|---------|
+| Site name | DPD FTO Program | Shows in the browser, header, and metadata |
+| Default locale | en-US | Controls language and formatting |
+| Time zone | UTC | Keeps timestamps consistent |
+| Search visibility | Enabled | Helps readers find topics faster |
+
+You can manage these settings through a config file or an admin panel, depending on how your site is hosted.
+
+## Branding options
+
+Branding keeps your documentation recognizable. A clean visual system helps readers understand that the docs belong to the same product, even when they move between pages.
+
+### Suggested brand settings
+
+- Primary color: `#3B82F6`
+- Accent color: a lighter blue or neutral gray
+- Logo: a compact mark that remains readable in the sidebar
+- Voice: clear, direct, and instructional
+
+## Navigation configuration
+
+Use navigation to guide readers through the most important paths first. Keep the top-level structure shallow so users can scan it quickly.
+
+<Tabs>
+  <Tab title="Simple sidebar" icon="list">
+    A simple sidebar works well when you have a small set of pages.
+
+    ````json
+    {
+      "navigation": [
+        {
+          "title": "Getting Started",
+          "href": "/quickstart"
+        },
+        {
+          "title": "Configuration",
+          "href": "/configuration"
+        },
+        {
+          "title": "Changelog",
+          "href": "/changelog"
+        }
+      ]
+    }
+    ````
+
+  </Tab>
+  <Tab title="Grouped sections" icon="folder">
+    Grouped navigation works better when you have several topics and want to separate setup from reference material.
+
+    ````json
+    {
+      "navigation": [
+        {
+          "title": "Introduction",
+          "href": "/introduction"
+        },
+        {
+          "title": "Setup",
+          "items": [
+            {
+              "title": "Quickstart",
+              "href": "/quickstart"
+            },
+            {
+              "title": "Configuration",
+              "href": "/configuration"
+            }
+          ]
+        }
+      ]
+    }
+    ````
+
+  </Tab>
+  <Tab title="Expanded menu" icon="chevron-right">
+    An expanded menu is useful when you want to surface multiple sections without forcing readers to search.
+
+    ````json
+    {
+      "navigation": [
+        {
+          "title": "Docs Home",
+          "href": "/introduction"
+        },
+        {
+          "title": "Project Setup",
+          "items": [
+            {
+              "title": "Quickstart",
+              "href": "/quickstart"
+            }
+          ]
+        },
+        {
+          "title": "Release Notes",
+          "href": "/changelog"
+        }
+      ]
+    }
+    ````
+
+  </Tab>
+</Tabs>
+
+## Default templates
+
+Templates help you keep page structure consistent across your documentation set. They are especially useful when multiple people write content and you want every page to follow the same pattern.
+
+<Steps>
+  <Step title="Define a page type" icon="book-open">
+    Choose a standard shape for each kind of page, such as a guide, reference, or announcement page.
+  </Step>
+  <Step title="Add placeholder sections" icon="settings">
+    Include headings for overview, examples, and troubleshooting so authors know what to write.
+  </Step>
+  <Step title="Preload shared content" icon="download">
+    Add common links, callouts, and snippets that appear on many pages.
+  </Step>
+  <Step title="Review before publishing" icon="check-circle">
+    Confirm that titles, links, and examples match your team’s voice and product terminology.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="YAML,JSON">
+  ```yaml
+site:
+  name: DPD FTO Program
+  locale: en-US
+  theme:
+    primaryColor: "#3B82F6"
+navigation:
+  home: /introduction
+  quickstart: /quickstart
+  configuration: /configuration
+  changelog: /changelog
+  ```
+  ```json
+{
+  "site": {
+    "name": "DPD FTO Program",
+    "locale": "en-US",
+    "theme": {
+      "primaryColor": "#3B82F6"
+    }
+  },
+  "navigation": {
+    "home": "/introduction",
+    "quickstart": "/quickstart",
+    "configuration": "/configuration",
+    "changelog": "/changelog"
+  }
+}
+  ```
+</CodeGroup>
+
+## Environment preferences
+
+Different environments often need different defaults. For example, your staging docs may point to test services, while production docs use stable endpoints.
+
+<ExpandableGroup>
+  <Expandable title="Development defaults" default-open="true">
+    Use development settings for local testing, draft content, and rapid iteration. Keep sample values obvious so no one mistakes them for production data.
+
+    ```bash
+    DOCS_ENV=development
+    DOCS_BASE_URL=https://docs.example.com
+    DOCS_SEARCH_INDEX=local
+    ```
+  </Expandable>
+  <Expandable title="Staging defaults" default-open="false">
+    Staging is a good place to verify navigation, permissions, and template changes before release.
+
+    ```bash
+    DOCS_ENV=staging
+    DOCS_BASE_URL=https://docs.example.com
+    DOCS_SEARCH_INDEX=staging
+    ```
+  </Expandable>
+  <Expandable title="Production defaults" default-open="false">
+    Production should use the final reviewed values for the public site and any connected services.
+
+    ```bash
+    DOCS_ENV=production
+    DOCS_BASE_URL=https://docs.example.com
+    DOCS_SEARCH_INDEX=production
+    ```
+  </Expandable>
+</ExpandableGroup>
+
+## Best practices
+
+Keep your configuration small, readable, and easy to change. If you need to document a setting, explain what it does, why it matters, and what a safe default looks like.
+
+<Callout kind="tip">
+  Start with a minimal configuration set, then expand only when you have a real need. That makes your docs easier to maintain over time.
+</Callout>
+
+### Recommended checklist
+
+- Use one source of truth for site settings.
+- Keep brand colors and labels consistent across pages.
+- Limit top-level navigation to the most important paths.
+- Reuse templates to reduce writing effort.
+- Separate development, staging, and production preferences clearly.
+
+When you are ready, you can adapt these examples to match your own workflows, labels, and publishing process.

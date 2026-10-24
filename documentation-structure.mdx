@@ -1,0 +1,171 @@
+---
+title: Documentation Structure
+description: Learn how to organize documentation pages, sections, and content for consistent publishing and maintenance. Ideal for teams creating or managing a growing knowledge base.
+---
+
+## Overview
+
+Use this page as a starter kit for organizing documentation in the DPD FTO Program. It gives you a simple structure you can adapt to product guides, internal runbooks, and customer-facing knowledge bases.
+
+A good documentation system helps you publish faster, keep content consistent, and make it easier for readers to find the right page. Start small, keep the structure predictable, and expand only when the content needs it.
+
+<Callout kind="info">
+
+This is a sample documentation template. Replace the examples with your own page names, folder names, and publishing rules.
+
+</Callout>
+
+## Recommended Page Layout
+
+Organize each page around a single purpose. A focused page is easier to maintain and easier to scan.
+
+<Columns cols={2}>
+  <Card title="Landing pages" icon="book-open" href="/introduction">
+    Use these pages to introduce your documentation space and point readers to the next step.
+  </Card>
+  <Card title="Setup guides" icon="download" href="/quickstart">
+    Use these pages to help readers complete a task quickly with clear prerequisites and actions.
+  </Card>
+  <Card title="Reference pages" icon="code" href="/authentication">
+    Use these pages for settings, parameters, and implementation details that readers revisit often.
+  </Card>
+  <Card title="Release notes" icon="check-circle" href="/changelog">
+    Use these pages to summarize changes, fixes, and new capabilities over time.
+  </Card>
+</Columns>
+
+### Suggested hierarchy
+
+Keep the same structure across pages whenever possible:
+
+1. H2 for major sections
+2. H3 for supporting topics
+3. H4 for specific details or edge cases
+
+This structure helps readers scan quickly and helps your team keep content consistent as the knowledge base grows.
+
+## Content Hierarchy
+
+Write from general to specific. Start with the reason the page exists, then explain the main concepts, and finish with the details readers need to act.
+
+<Steps>
+  <Step title="Define the page purpose" icon="target">
+    Explain what the page covers and when a reader should use it.
+  </Step>
+  <Step title="Group related topics" icon="layers">
+    Keep related instructions, examples, and reference notes together under the same section.
+  </Step>
+  <Step title="Add examples" icon="code">
+    Show a realistic example that readers can reuse or adapt.
+  </Step>
+  <Step title="End with next steps" icon="arrow-right">
+    Link to the next page or recommend the next action a reader should take.
+  </Step>
+</Steps>
+
+## Folder and Page Conventions
+
+Use clear names for folders and files so people can guess what a page contains before they open it.
+
+| Area | Convention | Example |
+|------|------------|---------|
+| Folder names | Use lowercase with hyphens | `getting-started`, `api-reference` |
+| Page names | Match the page purpose | `overview.mdx`, `webhooks.mdx` |
+| Section titles | Use sentence-style headings | `## Publish a page` |
+| File names | Keep them short and specific | `documentation-structure.mdx` |
+
+### Naming patterns
+
+Choose names that stay readable as your library grows. Avoid duplicate terms and avoid mixing styles across the same section of the docs.
+
+<CodeGroup tabs="Markdown,JSON,YAML">
+  ```markdown
+  ## Organize pages
+
+  Use one page for one topic and keep the section titles consistent across related pages.
+  ```
+  ```json
+  {
+    "title": "Organize pages",
+    "description": "Keep page names short and consistent"
+  }
+  ```
+  ```yaml
+  title: Organize pages
+  description: Keep page names short and consistent
+  ```
+</CodeGroup>
+
+## Navigation Patterns
+
+Readers should always know where they are, where they have been, and what to do next. You can support that with page links, section links, and a predictable sidebar order.
+
+<Tabs>
+  <Tab title="Left navigation" icon="menu">
+    Keep the sidebar in the same order as the user journey: overview, setup, usage, reference, and support.
+
+    Use this pattern when readers need a guided path through the docs.
+  </Tab>
+  <Tab title="In-page links" icon="link">
+    Add links near the top of longer pages so readers can jump to a specific section quickly.
+
+    This works well for long guides and reference pages.
+  </Tab>
+  <Tab title="Related pages" icon="arrow-right">
+    Add a small related-links section at the bottom of the page so readers can continue to the next task without searching.
+  </Tab>
+</Tabs>
+
+## Publishing Workflow
+
+Keep publishing simple and repeatable. A basic workflow helps your team review content before it goes live and reduces editing mistakes.
+
+1. Draft the page with the right heading structure.
+2. Review the content for clarity, completeness, and tone.
+3. Verify links, code examples, and filenames.
+4. Publish the page.
+5. Recheck the page after publishing to confirm formatting and navigation.
+
+<Callout kind="tip">
+
+If your team manages many pages, create a lightweight checklist for every release. That makes quality easier to repeat across editors and contributors.
+
+</Callout>
+
+### Example publishing checklist
+
+```bash
+git status
+git add documentation-structure.mdx
+git commit -m "docs: add documentation structure guide"
+git push origin main
+```
+
+## Common Pitfalls
+
+Avoid pages that try to cover too many topics at once. Readers often leave when they need to scroll through unrelated details before they find the answer.
+
+<Expandable title="What if your docs grow quickly?" default-open="false">
+
+Split large topics into smaller pages when a section becomes hard to scan. If a page needs several long subsections, create a new page and link it from the parent page.
+
+</Expandable>
+
+<Expandable title="How often should you update the structure?" default-open="false">
+
+Review your structure whenever you add a new product area, a new audience, or a new publishing workflow. Small updates are easier than a full redesign later.
+
+</Expandable>
+
+## Next Steps
+
+Use this template as the base for your own documentation set. Add pages for onboarding, configuration, troubleshooting, and feature-specific guides as your product evolves.
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart" horizontal>
+    Build a practical setup guide that helps readers get moving fast.
+  </Card>
+  <Card title="Changelog" icon="check-circle" href="/changelog" horizontal>
+    Document updates in a consistent format so readers can track changes over time.
+  </Card>
+</Columns>

@@ -1,0 +1,215 @@
+---
+title: Content Management
+description: Understand how to create, edit, update, and maintain documentation content over time. Covers practical patterns for keeping information accurate and easy to find.
+---
+
+## Overview
+
+Use this page to organize, edit, and maintain documentation content for the DPD FTO Program. It gives you a simple workflow for creating pages, reviewing changes, and keeping information current as your product evolves.
+
+This is a starter kit template, so the examples are generic on purpose. You can adapt the structure, naming, and workflows to match your team, approval process, and publishing tools.
+
+<Callout kind="info">
+
+This documentation is a starting point. Replace the sample page names, review steps, and content rules with your own process.
+
+</Callout>
+
+## Core content workflows
+
+A healthy documentation system usually follows the same lifecycle: draft, review, publish, and maintain. If you keep each stage explicit, you make it easier for authors and reviewers to work quickly without losing quality.
+
+<Columns cols={3}>
+  <Card title="Create pages" icon="book-open" href="/quickstart">
+    Start new pages with a clear purpose, audience, and one primary topic.
+  </Card>
+  <Card title="Edit content" icon="settings" href="/authentication">
+    Update copy, examples, and links as your product changes.
+  </Card>
+  <Card title="Maintain quality" icon="shield" href="/changelog">
+    Review content regularly so readers always see accurate information.
+  </Card>
+</Columns>
+
+### Recommended workflow
+
+<Steps>
+  <Step title="Plan the page" icon="book-open">
+    Define the page goal, the audience, and the single outcome you want the reader to achieve.
+  </Step>
+  <Step title="Write the first draft" icon="code">
+    Add the main explanation, a realistic example, and any supporting notes the reader needs to follow along.
+  </Step>
+  <Step title="Review and approve" icon="check-circle">
+    Check accuracy, tone, links, and formatting before you publish.
+  </Step>
+  <Step title="Maintain over time" icon="settings">
+    Revisit the page when product behavior, terminology, or screenshots change.
+  </Step>
+</Steps>
+
+## Creating pages
+
+When you create a new page, start with the reader's intent instead of the internal project structure. That usually produces clearer headings and a more useful page flow.
+
+### Page structure example
+
+<CodeGroup tabs="Markdown,MDX">
+  ```markdown
+## Introduction
+
+Explain what the page covers.
+
+## Setup
+
+Describe what the reader needs.
+
+## Examples
+
+Show a practical workflow.
+  ```
+  ````mdx
+## Introduction
+
+Explain what the page covers.
+
+## Setup
+
+Describe what the reader needs.
+
+## Examples
+
+Show a practical workflow.
+  ````
+</CodeGroup>
+
+Use short, descriptive titles and keep each section focused on one task. If a page starts to cover too many topics, split it into smaller pages so readers can find information faster.
+
+## Editing content
+
+Editing works best when you treat documentation like product content, not static copy. Small improvements to clarity, examples, and navigation often have a bigger impact than large rewrites.
+
+### Platform-specific editing patterns
+
+<Tabs>
+  <Tab title="Drafting" icon="edit-3">
+    Write in plain language, keep sentences short, and use active voice. Name the action the reader should take first.
+  </Tab>
+  <Tab title="Reviewing" icon="search">
+    Check for unclear terms, outdated screenshots, broken links, and examples that no longer match the product.
+  </Tab>
+  <Tab title="Publishing" icon="rocket">
+    Confirm the page title, description, and section order before you publish the update.
+  </Tab>
+</Tabs>
+
+### A practical edit example
+
+````javascript
+const page = {
+  title: "Content Management",
+  status: "ready-for-review",
+  lastUpdated: "2026-10-24"
+};
+
+function publishDraft(currentPage) {
+  return {
+    ...currentPage,
+    status: "published",
+    reviewedBy: "documentation-team"
+  };
+}
+
+const updatedPage = publishDraft(page);
+console.log(updatedPage);
+````
+
+This example shows a simple publish flow. In a real documentation system, you might also record approvals, version history, and a review timestamp.
+
+## Versioning content
+
+Versioning helps you keep a reliable history of changes. It is especially useful when content changes often or when different product releases require different instructions.
+
+<Callout kind="tip">
+
+Use version notes to explain why a page changed, not just what changed. That helps reviewers understand whether an update is editorial, structural, or product-related.
+
+</Callout>
+
+### Suggested version record
+
+| Field | Example value | Purpose |
+|------|------|------|
+| Version | `v1.4.0` | Tracks the release or documentation revision |
+| Status | `published` | Shows whether the content is live |
+| Owner | `documentation-team` | Identifies who maintains the page |
+| Review date | `2026-10-24` | Reminds you when to validate the page again |
+
+### Example version note
+
+````bash
+Updated the setup section to match the latest navigation labels and clarified the approval workflow.
+````
+
+Keep version notes short, factual, and easy to scan. If your team uses Git-based publishing, commit messages can serve as a lightweight version trail.
+
+## Review and approval
+
+A review process prevents outdated or confusing content from reaching readers. Even a simple checklist can reduce errors and make ownership clearer.
+
+### Review checklist
+
+- Confirm the content matches current product behavior.
+- Verify all links, names, and labels.
+- Check examples for realism and completeness.
+- Remove duplicated or conflicting guidance.
+- Ensure the page has one clear purpose.
+
+### Common approval roles
+
+<Columns cols={2}>
+  <Card title="Author" icon="user" href="#">
+    Drafts the page and addresses feedback before approval.
+  </Card>
+  <Card title="Reviewer" icon="check" href="#">
+    Confirms accuracy, clarity, and consistency with the product.
+  </Card>
+</Columns>
+
+If your team needs extra structure, add an approval gate for sensitive content such as migration steps, permission settings, or compliance notes.
+
+## Content maintenance
+
+Documentation works best when you treat maintenance as a recurring task, not a one-time project. Even stable pages benefit from periodic updates, especially when terminology, navigation, or workflows evolve.
+
+<Expandable title="Maintenance tips" default-open="false">
+
+- Review high-traffic pages first.
+- Update examples when the product interface changes.
+- Remove outdated references before they spread to other pages.
+- Keep page titles and section labels consistent.
+
+</Expandable>
+
+<Expandable title="When to refresh a page" default-open="false">
+
+Refresh a page when you change a workflow, rename a feature, or notice repeated reader questions. If users ask the same thing more than once, that page probably needs improvement.
+
+</Expandable>
+
+### Practical maintenance cadence
+
+1. Check top-level pages weekly or biweekly.
+2. Review deeper reference pages on a monthly schedule.
+3. Audit older content after each major release.
+4. Close the loop by logging what changed and why.
+
+## Next steps
+
+You can use this starter structure to build a complete documentation system for the DPD FTO Program. Start small, keep the workflow simple, and update pages as your product matures.
+
+<Callout kind="success">
+
+A clear content process makes documentation easier to write, easier to review, and easier for readers to trust.
+
+</Callout>
